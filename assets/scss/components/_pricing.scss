@@ -1,0 +1,226 @@
+/*
+ * Pricing component style.
+ *
+ */
+
+.pricing-section {
+    text-align: center;
+    margin-bottom: 57px;
+
+    @media (min-width: $tablet) {
+        margin-bottom: 0;
+    }
+
+    .container {
+        display: grid;
+        padding: 100px 15px;
+        position: relative;
+
+        @media (min-width: $desktop) {
+            padding: 140px 32px 139px;
+        }
+
+        .pricing-section__info {
+            margin-bottom: 63px;
+
+            @media (min-width: $desktop) {
+                margin-bottom: 37px;
+            }
+
+            h2 {
+                @include headingBG(calc(50% - 60px), -21.5px, $heading-bg-mobile-3);
+                margin-bottom: 25px;
+
+                @media (min-width: $tablet) {
+                    @include headingBG(calc(50% - 278px), -16.5px, $heading-bg-tablet-2);
+                }
+
+                @media (min-width: $desktop) {
+                    @include headingBG(calc(50% - 321px), -19.5px, $heading-bg-desktop-4);
+                }
+            }
+
+            p {
+                @media (min-width: $desktop) {
+                    padding: 0 181px;
+                    letter-spacing: -0.32px;
+                }
+            }
+        }
+
+        .pricing-section__plans {
+            gap: 20px;
+            justify-self: center;
+            text-align: start;
+            font-size: $fos-16;
+            font-weight: $fweight-400;
+            letter-spacing: $letter-spacing_2;
+            line-height: $lheight_1-25;
+            
+            @media (min-width: $tablet) {
+                gap: 0;
+                grid-template-columns: repeat(3, 413px);
+            }
+            
+            @media (min-width: $desktop) {
+                display: grid;
+                gap: 31px;
+                font-size: $fos-18;
+                font-weight: $fweight-500;
+                line-height: $lheight_1-27;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+              }
+
+            .plan__column:nth-child(even) {
+                display: block;
+                color: $color-default-100;
+                border: solid 1px $color-dark-100;
+                background-color: $color-dark-100;
+
+                @media (min-width: $tablet) {
+                    transform: scale(1);
+                }
+
+                @media (min-width: $desktop) {
+                    height: 100%;
+                    padding: 80px 44px;
+                }
+
+                .plan__info {
+                    h4 {
+                        @media (min-width: $desktop) {
+                            color: $color-yellow-100;
+                        }
+                    }
+                }
+
+                .plan__benefits {
+                    ul {
+                        @media (min-width: $desktop) {
+                            font-size: $fos-18;
+                            font-weight: $fweight-500;
+                            line-height: $lheight_1-27;
+                        }
+                    }
+                }
+            }
+
+            .plan__column {
+                // display: none;
+                padding: 19.1px 20px;
+                border-radius: 10px;
+                border: solid 1px $color-yellow-100;
+
+                
+                @media (min-width: $tablet) {
+                    display: block;
+                    transform: scale(.9);
+                    align-self: center;
+                }
+                
+                @media (min-width: $desktop) {
+                    transform: scale(1);
+                    padding: 40px 48px 40px 43px;
+                }
+
+                .plan__info {
+                    margin-bottom: 25px;
+
+                    h3 {
+                        font-size: $fos-24;
+                        font-weight: $fweight-600;
+                        line-height: $lheight_1-5;
+                        letter-spacing: normal;
+                        margin-bottom: 24px;
+
+                        @media (min-width: $desktop) {
+                            font-size: $fos-24;
+                        }
+                    }
+
+                    h4 {
+                        font-size: $fos-36;
+                        font-weight: $fweight-700;
+                        line-height: normal;
+                        letter-spacing: $letter-spacing_2;
+                        margin-bottom: 26px;
+                    }
+                }
+
+                .plan__benefits {
+                    ul {
+                        display: grid;
+                        gap: 28px;
+                        margin-bottom: 24.5px;
+
+                        @media (min-width: $desktop) {
+                            margin-bottom: 25.5px;
+                            font-size: $fos-16;
+                            font-weight: $fweight-400;
+                            letter-spacing: $letter-spacing_2;
+                            line-height: $lheight_1-25;
+                        }
+
+                        li {
+                            display: grid;
+                            align-items: center;
+                            grid-template-columns: 0fr 1fr;
+                            &::before {
+                                content: "\e905";
+                                font-size: 21px;
+                                line-height: 0;
+                                display: inline-block;
+                                margin-right: 17px;
+                                font-family: 'Icomoon' !important;
+                            }
+                        }
+                    }
+
+                    .plan__btn {
+                        padding: 20px 40px 19px 40px;
+
+                        @media (min-width: $desktop) {
+                            font-size: $fos-16;
+                            padding: 16px 40.5px 15px 40px;
+                        }
+
+                        &::after {
+                            content: unset;
+                        }
+                    }
+                }
+            }
+
+        }
+        .plan__slide-nav {
+            position: absolute;
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: $color-lightblue;
+                opacity: 1;
+            }
+
+            .swiper-pagination-bullet-active {
+                background-color: $color-dark-100;
+            }
+        }
+    }
+}
+
+// Slider 
+.swiper {
+    // width: 100%;
+    position: static !important;
+
+    .swiper-slide {
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+}

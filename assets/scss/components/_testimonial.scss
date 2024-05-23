@@ -1,0 +1,248 @@
+/*
+ * Testimonial component style.
+ *
+ */
+
+.testimonial-section {
+    text-align: center;
+    position: relative;
+
+    .container {
+        padding: 102px 16px 175px;
+        display: grid;
+
+        @media (min-width: $desktop) {
+            padding: 137px 32px 179px;
+        }
+
+        .testimonial-section__info {
+            margin-bottom: 37px;
+
+            @media (min-width: $desktop) {
+                margin-bottom: 34px;
+            }
+
+            h2 {
+                font-size: $fos-40;
+                line-height: $lheight_1-3;
+                letter-spacing: -0.1px;
+                @include headingBG(calc(50% - 42px), -4px, $heading-bg-mobile-7);
+
+                @media (min-width: $desktop) {
+                    @include headingBG(calc(50% - 337px), -10px, $heading-bg-desktop-7);
+                    font-size: $fos-70;
+                    letter-spacing: normal !important;
+                }
+            }
+        }
+
+        .testimonial-section__cards {
+            text-align: start;
+            display: grid;
+            grid-template-columns: repeat(3, 100%);
+            gap: 20px;
+
+            @media (min-width: $tablet) and (max-width: $desktop) {
+                overflow-x: auto;
+            }
+
+            @media (min-width: $tablet) {
+                grid-template-columns: repeat(3, 342px);
+            }
+
+            @media (min-width: $desktop) {
+                gap: 32px;
+                justify-self: center;
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+              }
+
+            .card {
+                width: 100%;
+                justify-self: center;
+                cursor: pointer;
+                transition: .2s ease;
+                border-radius: 10px;
+                padding: 17px 20px;
+                display: grid;
+                gap: 40px;
+                box-shadow: 15px 10px 50px rgb(0, 0, 0, 10%);
+
+                @media (min-width: $desktop) {
+                    padding: 40px 24px;
+                    color: $color-default-100;
+                    background-color: $color-blue-100;
+                }
+
+                blockquote {
+                    display: grid;
+                    gap: 36px;
+
+                    @media (min-width: $desktop) {
+                        gap: 54px;
+                    }
+
+                    q {
+                        font-size: $fos-16;
+                        line-height: $lheight_1-25;
+                        letter-spacing: $letter-spacing_2;
+
+                        @media (min-width: $desktop) {
+                            font-size: $fos-18;
+                            line-height: $lheight_1-66;
+                        }
+
+                        &::before {
+                            width: 100%;
+                            display: inline-block;
+                            content: "\e906";
+                            font-size: 39px;
+                            color: $color-dark-100;
+                            margin-bottom: 27px;
+                            font-family: 'Icomoon' !important;
+
+                            @media (min-width: $desktop) {
+                                font-size: 62px;
+                                color: $color-default-100;
+                                margin-bottom: 11px;
+                            }
+                        }
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 1%;
+                            margin-top: 37.5px;
+                            display: inline-block;
+                            background-color: $color-black;
+                        }
+                    }
+
+                    @media (min-width: $desktop) {
+                        .user-profile {
+                            display: grid;
+                            gap: 44px;
+                            grid-template-columns: auto 1fr;
+                        }
+                    }
+
+                    .user-avatar {
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 50%;
+                        margin-bottom: 21px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                        }
+
+                        @media (min-width: $desktop) {
+                            width: 95px;
+                            height: 95px;
+                        }
+                    }
+
+                    cite {
+                        font-style: normal;
+
+                        @media (min-width: $desktop) {
+                            font-size: $fos-16;
+                            line-height: $lheight_1-25;
+                        }
+
+                        strong {
+                            width: 100%;
+                            margin-bottom: 11px;
+                            display: inline-block;
+
+                            @media (min-width: $desktop) {
+                                font-size: $fos-24;
+                                font-weight: $fweight-600;
+                                line-height: $lheight_1-5;
+                                color: $color-dark-100;
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card:hover {
+                color: $color-black;
+                background-color: $color-default-100;
+
+                blockquote q::before {
+                    color: $color-dark-100;
+                }
+
+                cite strong {
+                    color: $color-black;
+                }
+            }
+
+            .card:nth-child(n+2) {
+                display: none;
+
+                @media (min-width: $tablet) {
+                    display: block;
+                }
+            }
+
+            a {
+                &::before, &::after, span::before {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    bottom: 100px;
+                    left: 48%;
+                    border-radius: 50%;
+                    position: absolute;
+                    background-color: $color-lightblue;
+
+                    @media (min-width: $medium-mobile) {
+                        left: 49%;
+                    }
+
+                    @media (min-width: $tablet) {
+                        left: 50%;
+                    }
+
+                    @media (min-width: $desktop) {
+                        bottom: 140px;
+                    }
+                }
+
+                &::before {
+                    left: calc(50% - 30px);
+                    @media (min-width: $tablet) {
+                        left: calc((50% - 20px));
+                    }
+
+                    @media (min-width: $desktop) {
+                        left: calc((50% - 30px));
+                    }
+                }
+
+                span:before {
+                    @media (min-width: $desktop) {
+                        left: calc(50% - 6px);
+                    }
+                    background-color: $color-dark-100;
+                }
+                
+                &::after {
+                    left: calc(50% + 20px);
+
+                    @media (min-width: $desktop) {
+                        left: calc(50% + 18px);
+                    }
+                }
+            }
+        }
+    }
+}

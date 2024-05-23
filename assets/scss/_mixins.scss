@@ -1,0 +1,24 @@
+/*
+ * All mixins defined here!
+ *
+ */
+
+// Flex style
+@mixin flexProps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Heading background 
+@mixin headingBG($right, $bottom, $img-url) {
+    z-index: 11;
+    position: relative;
+
+    &::after {
+        bottom: $bottom;
+        right: $right;
+        z-index: -1;
+        content: url($img-url);
+        position: absolute;
+    }
+}

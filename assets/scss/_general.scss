@@ -1,0 +1,216 @@
+/*
+ * All general and reset style is defined here!
+ *
+ */
+
+// Reset default styles.
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before, &::after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    margin: 0;
+    font-size: $fos-18;
+    color: $color-black;
+    font-weight: $fweight-400;
+    line-height: $lheight_1-66;
+    font-family: $ff-primary;
+    letter-spacing: $letter-spacing_2;
+    transition: .5s ease;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 22px 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+blockquote {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: $fos-36;
+    font-weight: $fweight-700;
+    line-height: $lheight_1-25;
+    letter-spacing: $letter-spacing_2;
+
+    @media (min-width: $tablet) {
+        font-size: $fos-54;
+        line-height: normal;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: $fos-64;
+        letter-spacing: -1.3px;
+    }
+}
+
+h2 {
+    font-size: $fos-36;
+    font-weight: $fweight-700;
+    line-height: normal;
+    letter-spacing: $letter-spacing_2;
+
+    @media (min-width: $tablet) {
+        font-size: $fos-54;
+    }
+
+    @media (min-width: $desktop) {
+        letter-spacing: -1.5px !important;
+        font-size: $fos-72;
+    }
+
+}
+
+p {
+    @media (min-width: $desktop) {
+        letter-spacing: -0.36px;
+    }
+}
+
+.accessibility {
+    display: none;
+}
+
+// Page wrapper
+#wrapper {
+    position: relative;
+}
+
+main {
+    overflow: hidden;
+}
+
+// Generic page container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1440px;
+
+    @media (min-width: $tablet) {
+        padding: 0 32px;
+    }
+}
+
+// Display
+.open {
+    display: block !important;
+}
+
+// rotate 
+.rotate {
+    &::after {
+        transform: rotate(180deg);
+        transform: .2s ease;
+    }
+}
+
+// Primary button
+.btn {
+    color: $color-default-100;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 20px 24px 16px 25px;
+    font-size: $fos-18;
+    line-height: $lheight_1-27;
+    letter-spacing: $letter-spacing_2;
+    background-color: $color-blue-100;
+    transition: .2s ease-in-out;
+
+    &::after {
+        content: "\e908";
+        font-size: 11px;
+        padding-top: 4px;
+        margin-left: 11px;
+        color: $color-default-100;
+        font-family: "icomoon" !important;
+        transition: .2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: $color-default-100;
+        color: $color-blue-100;
+        box-shadow: inset 0 0 0 1px $color-blue-100;
+    }
+
+    &:hover::after {
+        color: $color-blue-100
+    }
+}
+
+// Secondary button 
+.secndry-btn {
+    @extend .btn;
+    padding: 18.5px 40px;
+    font-weight: 500;
+    color: $color-dark-100;
+    background-color: $color-yellow-100;
+
+    &::after {
+        content: unset;
+    }
+
+    &:hover {
+        color: $color-yellow-100;
+        box-shadow: inset 0 0 0 1px $color-yellow-100;
+    }
+}
+
+
+@media (min-width: $desktop) and (max-width: 1430px) {
+    .hero-section__info, .project-section__info, .customise-section__info, .work-section__info {
+        padding-right: 18px;
+    }
+
+    .integrate-section__info {
+        padding-left: 18px;
+    }
+
+    .footer .container .footer__top {
+        gap: 35px !important;
+        grid-template-columns: 1fr .5fr .5fr .5fr 1fr !important;
+
+        .footer__links {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+
+.desktop-btn, .desktop-content {
+    display: none;
+
+    @media (min-width: $desktop) {
+        display: inline-block;
+    }
+}
+
+.mobile-btn, .mobile-content {
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}

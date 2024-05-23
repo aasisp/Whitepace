@@ -1,0 +1,66 @@
+/*
+ * Integrate component style.
+ *
+ */
+
+.integrate-section {
+    color: $color-default-100;
+    text-align: center;
+    background: $color-dark-100 url(../../../assets/img/bg/bg-integrate.svg);
+    background-repeat: no-repeat;
+    background-position: 0px -46px;
+    background-size: cover;
+
+    @media (min-width: $tablet) {
+        background-position-x: -227px;
+        background-position-y: -143px;
+        background-image: url('../../../assets/img/bg/integrate-section-tablet.svg');
+    }
+
+    @media (min-width: $desktop) {
+        text-align: start;
+        background-position: -39px -10px;
+        background-image: url('../../../assets/img/bg/integrate-section-desktop.svg');
+    }
+
+    .container {
+        padding: 80px 16px;
+        display: grid;
+        gap: 89px;
+
+        @media (min-width: $tablet) {
+            padding: 140px 32px;
+        }
+
+        @media (min-width: $desktop) {
+            gap: 0;
+            padding: 140px 32px 131px;
+            grid-template-columns: .982fr 1fr;
+        }
+
+        .integrate-section__info {
+
+            h2 {
+                letter-spacing: -0.7px;
+                margin-bottom: 25px;
+
+                @media (min-width: $desktop) {
+                    letter-spacing: normal;
+                    margin-bottom: 24px;
+                }
+            }
+
+            p {
+                margin-bottom: 60px;
+            }
+
+            .integrate-section__btn {
+                padding: 24px 42px 23px 42px;
+
+                @media (min-width: $desktop) {
+                    padding: 20px 42px 20px 42px;
+                }
+            }
+        }
+    }
+}

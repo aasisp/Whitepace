@@ -1,0 +1,175 @@
+/*
+ * Data component style.
+ *
+ */
+
+.work-section {
+    position: relative;
+
+    .work__sub-section:first-child {
+        color: $color-default-100;
+        background-color: $color-dark-100;
+
+        @media (min-width: $desktop) {
+            text-align: center;
+        }
+
+        .container {
+            .work-section__info {
+                p {
+                    @media (min-width: $desktop) {
+                        padding: 0 131px;
+                        margin-bottom: 59.5px;
+                    }
+                }
+
+                .work-section__btn {
+                    padding: 24px 40px 23px 40px;
+
+                    @media (min-width: $desktop) {
+                        padding: 20px 40px 20px 40px;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            @media (min-width: $tablet) {
+                position: absolute;
+            opacity: .4;
+            top: 0;
+            left: 0;
+            content: url('../../../assets/img/bg/data-bg.svg');
+            }
+
+            @media (min-width: $desktop) {
+                top: -184px;
+                content: url('../../../assets/img/bg/data-bg-desktop.svg');
+            }
+        }
+    }
+
+    .work__sub-section:last-child {
+        text-align: center;
+
+        @media (min-width: $desktop) {
+            text-align: start;
+        }
+        .container {
+            padding: 80px 16px;
+
+            @media (min-width: $desktop) {
+                display: grid;
+                gap: 0;
+                padding: 140px 32px;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .work-section__info {
+                h2 {    
+                    @include headingBG(calc(50% - 158px), -21.5px, $heading-bg-mobile-5);
+
+                    @media (min-width: $tablet) {
+                        @include headingBG(calc(50% - 252px), -18.5px, $heading-bg-tablet-2);
+                    }
+
+                    @media (min-width: $desktop) {
+                        @include headingBG(calc(50% - 242px), -36px, $heading-bg-desktop-5);
+                    }
+                }
+
+                p {
+                    @media (min-width: $desktop) {
+                        margin-bottom: 58.55px;
+                    }
+                }
+
+                .work-section__btn {
+                    @media (min-width: $desktop) {
+                        padding: 20px 40.5px 20px 41px;
+                    }
+                }
+            }
+
+            .work-section__img {
+                order: -1;
+
+                @media (min-width: $desktop) {
+                    order: 1;
+                }
+            }
+
+        }
+    }
+
+    .work__sub-section {
+        .container {
+            display: grid;
+            gap: 100px;
+            padding: 100px 16px 140px 16px;
+
+            @media (min-width: $tablet) {
+                padding: 140px 32px;
+            }
+
+            .work-section__info {
+                @media (min-width: $desktop) {
+                    align-self: center;
+                }
+
+                h2 {
+                    @include headingBG(calc(50% - 130px), -9.5px, $heading-bg-mobile-4);
+                    margin-bottom: 25px;
+                    letter-spacing: -0.7px;
+
+                    @media (min-width: $medium-mobile) {
+                        @include headingBG(calc(50% - 130px), 24.5px, $heading-bg-mobile-4); 
+                    }
+
+                    @media (min-width: $tablet) {
+                        @include headingBG(calc(50% - -132px), -20.5px, $heading-bg-tablet-3);
+                    }
+
+                    @media (min-width: $desktop) {
+                        margin-right: 21.5px;
+                        @include headingBG(122px, -15.5px, $heading-bg-desktop-8);
+                    }
+                }
+
+                p {
+                    margin-bottom: 60.5px;
+                }
+
+                .work-section__btn {
+                    padding: 25px 38px 22px 39px;
+
+                    &::after {
+                        font-size: $fos-16;
+                    }
+                }
+            }
+
+            .work-section__img {
+                width: 100%;
+                height: 162.58px;
+                max-width: 290.5px;
+                justify-self: center;
+
+                @media (min-width: $tablet) {
+                    max-width: 681px;
+                    height: 381.13px;
+                }
+
+                @media (min-width: $desktop) {
+                    max-width: 681px;
+                    height: 381.13px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

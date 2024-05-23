@@ -1,0 +1,21 @@
+/*
+ * Primary file of scss.
+ *
+ */
+
+// Import scss file
+@import 'var';
+@import 'general';
+@import 'mixins';
+@import 'icons';
+@import './components/header';
+@import './components/hero';
+@import './components/project';
+@import './components/customise';
+@import './components/pricing';
+@import './components/work';
+@import './components/sponsor';
+@import './components/integrate';
+@import './components/testimonial';
+@import './components/try';
+@import './components/footer';

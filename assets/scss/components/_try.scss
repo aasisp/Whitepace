@@ -1,0 +1,140 @@
+/*
+ * Try component style.
+ *
+ */
+
+.try-section {
+    color: $color-default-100;
+    background-color: $color-dark-100;
+
+    @media (min-width: $desktop) {
+        text-align: center;
+    }
+
+    .container {
+        padding: 101px 16px;
+
+        @media (min-width: $desktop) {
+            padding: 140px 16px;
+        }
+
+        .try-cont {
+
+            @media (min-width: $desktop) {
+                max-width: 608px;
+                margin: 0 auto;
+            }
+            .try-section__info {
+                h2 {
+                    font-size: $fos-40;
+                    line-height: $lheight_1-3;
+                    margin-bottom: 23px;
+
+                    @media (min-width: $desktop) {
+                        font-size: $fos-72;
+                        line-height: normal;
+                        letter-spacing: $letter-spacing_2;;
+                    }
+                }
+
+                p {
+                    margin-bottom: 1px;
+
+                    @media (min-width: $desktop) {
+                        font-size: $fos-24;
+                        line-height: $lheight_1-33;
+                    }
+                }
+
+                p:last-child {
+                    margin-bottom: 39.5px;
+                }
+            }
+
+            .try-section__btn {
+                font-size: $fos-16;
+                line-height: $lheight_1-25;
+                font-family: $ff-montserrat;
+                letter-spacing: normal;
+                padding: 21px 40px 19px 40px;
+                margin-bottom: 40px;
+
+                @media (min-width: $desktop) {
+                    font-size: $fos-18;
+                    font-weight: $fweight-500;
+                    line-height: $lheight_1-27;
+                    letter-spacing: normal;
+                    font-family: $ff-montserrat;
+                }
+
+                &::after {
+                    font-size: 14.5px;
+                    margin-left: 13.5px;
+                }
+            }
+
+            .try-section__download {
+
+                p {
+                    margin-bottom: 30px;
+
+                    @media (min-width: $desktop) {
+                        font-size: $fos-24;
+                        line-height: $lheight_1-33;
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .download__btn {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 44.5px;
+
+                    @media (min-width: $desktop) {
+                        gap: 47.4px;
+                        justify-content: center;
+                    }
+
+                    i {
+                        font-style: normal;
+                    }
+
+                    .app-store, .microsoft-store, .play-store {
+                        &::before {
+                            font-size: 34px;
+                            font-family: 'Icomoon' !important;
+                            color: $color-default-100;
+
+                            @media (min-width: $desktop) {
+                                font-size: 58px;
+                            }
+                        }
+                    }
+
+                    .app-store {
+                        &::before {
+                            margin-left: 3px;
+                            content: "\e90a";
+
+                            @media (min-width: $desktop) {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+
+                    .microsoft-store {
+                        &::before {
+                            content: "\e902";
+                        }
+                    }
+
+                    .play-store {
+                        &::before {
+                            content: "\e909";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

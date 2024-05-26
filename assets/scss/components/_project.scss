@@ -6,12 +6,12 @@
 .project-section {
     padding: 80px 0;
     text-align: center;
-    background-image: url('../../../assets/img/bg/bg-work-01.svg');
+    background-image: url('https://aasisp.github.io/Whitepace/assets/img/bg/bg-work-01.svg');
     background-repeat: no-repeat;
     background-position: 0 39px;
 
     @media (min-width: $tablet) {
-        background-image: url('../../../assets/img/bg/bg-work.svg');
+        background-image: url('https://aasisp.github.io/Whitepace/assets/img/bg/bg-work.svg');
         background-repeat: no-repeat;
         background-position: -360px 40px;
     }
@@ -19,7 +19,7 @@
     @media (min-width: $desktop) {
         padding: 140px 0;
         text-align: start;
-        background-image: url('../../../assets/img/bg/bg-work.svg');
+        background-image: url('https://aasisp.github.io/Whitepace/assets/img/bg/bg-work.svg');
         background-repeat: no-repeat;
         background-position: -313px 3px;
     }

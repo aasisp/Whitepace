@@ -166,7 +166,7 @@
                     }
                 }
 
-                @media (min-width: $desktop) {
+                @media (min-width: 1224px) {
 
                     li:hover .drop-nav:after {
                         transform: rotate(180deg);
